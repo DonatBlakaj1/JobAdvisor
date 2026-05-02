@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Sidebar</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="root">
+    <aside class="sidebar">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <h2 class="JobAdvisor">JobAdvisor<span>.</span></h2>
+        <p>PORTA E BIZNESEVE</p>
+      </div>
+
+      <!-- MENU -->
+      <div class="menu">
+
+        <p margin-top="0" class="section">KRYESORE</p>
+
+        <button class="item active">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="1" width="5" height="5" rx="1" fill="currentColor"></rect>
+            <rect x="8" y="1" width="5" height="5" rx="1" fill="currentColor" opacity=".5"></rect>
+            <rect x="1" y="8" width="5" height="5" rx="1" fill="currentColor" opacity=".5"></rect>
+            <rect x="8" y="8" width="5" height="5" rx="1" fill="currentColor" opacity=".5"></rect>
+          </svg>
+          <p>Ballina</p>
+        </button>
+
+        <button class="item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="1" y="2.5" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.1"></rect>
+            <path d="M4 5.5h6M4 8h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path>
+          </svg>
+          <p>Shpalljet e Punës</p>
+          <span class="badge gold">3</span>
+        </button>
+
+        <button class="item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.1"></circle>
+            <path d="M1.5 12.5c0-2.5 2.5-4.5 5.5-4.5s5.5 2 5.5 4.5" stroke="currentColor" stroke-width="1.1"
+              stroke-linecap="round"></path>
+          </svg>
+          <p>Aplikantët</p>
+          <span class="badge blue">18</span>
+        </button>
+
+        <p class="section">MENAXHIMI</p>
+
+        <button class="item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L8.7 5.3H13L9.7 7.9L10.9 12.5L7 10.1L3.1 12.5L4.3 7.9L1 5.3H5.3L7 1Z" stroke="currentColor"
+              stroke-width="1.1" stroke-linejoin="round"></path>
+          </svg>
+          <p>Plani i Shërbimit</p>
+        </button>
+        <button class="item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+          </svg>
+          <p>Shto Pozitë të Re</p>
+        </button>
+        <button class="item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"></circle>
+            <path d="M7 4v3l2 2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path>
+          </svg>
+          <p>Historia</p>
+        </button>
+
+        <p class="section">LLOGARIA</p>
+
+        <button class="item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.1"></circle>
+            <path d="M2 12a5 5 0 0110 0" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path>
+          </svg>
+          <p>Profili i Kompanisë</p>
+        </button>
+        <button class="item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.1"></circle>
+            <path d="M7 1v2M7 11v2M1 7h2M11 7h2M2.9 2.9l1.4 1.4M9.7 9.7l1.4 1.4M2.9 11.1l1.4-1.4M9.7 4.3l1.4-1.4"
+              stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path>
+          </svg>
+          <p>Cilësimet</p>
+        </button>
+
+      </div>
+
+      <!-- PROFILE -->
+      <div class="profile">
+        <div class="avatar">TK</div>
+        <div>
+          <p class="name">TechKos SHPK</p>
+          <span class="role">Administrator</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <div class="main">
+      <div class="topbar">
+         <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <div>
+          <span class="tbar-title" id="tbar-title">Ballina</span>
+          <span class="tbar-sub" id="tbar-sub">— e hënë, 28 Prill 2026</span>
+        </div>
+        <div class="tbar-actions">
+          <div class="ndot"></div>
+          <button class="btn-g">Njoftime (2)</button>
+          <button class="btn-p" onclick="nav('shto',document.querySelector('[onclick*=shto]'))">+ Shto Pozitë</button>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <!-- PAGE: BALLINA -->
+        <div class="page on" id="page-ballina">
+          <div class="sgrid">
+            <div class="scard sc-gold">
+              <div class="sc-lbl">Shpallje Aktive</div>
+              <div class="sc-val">3</div>
+              <div class="sc-ch up">↑ 1 këtë javë</div>
+            </div>
+            <div class="scard sc-blue">
+              <div class="sc-lbl">Aplikantë Total</div>
+              <div class="sc-val">18</div>
+              <div class="sc-ch up">↑ 5 të rinj</div>
+            </div>
+            <div class="scard sc-green">
+              <div class="sc-lbl">Të Punësuar</div>
+              <div class="sc-val">4</div>
+              <div class="sc-ch up">↑ këtë muaj</div>
+            </div>
+            <div class="scard sc-red">
+              <div class="sc-lbl">Shpallje Skaduar</div>
+              <div class="sc-val">2</div>
+              <div class="sc-ch down">Rinovim i nevojshëm</div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="panel">
+              <div class="ph"><span class="ph-t">Shpalljet e Fundit</span>
+                <button class="ph-a" onclick="nav('puna',document.querySelectorAll('.nitem')[1])">Shiko të gjitha →</button></div>
+              <table class="jtable">
+                <thead>
+                  <tr>
+                    <th>Pozita</th>
+                    <th>Regjioni</th>
+                    <th>Aplikantë</th>
+                    <th>Statusi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="jt">Zhvillues Software</span></td>
+                    <td>Prishtinë</td>
+                    <td>
+                      <div class="abar"><span>7</span>
+                        <div class="ab">
+                          <div class="af" style="width:70%"></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="sb sa">Aktive</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="jt">Menaxher Marketingu</span></td>
+                    <td>Pejë</td>
+                    <td>
+                      <div class="abar"><span>5</span>
+                        <div class="ab">
+                          <div class="af" style="width:50%"></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="sb sr">Shqyrtim</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="jt">Analiste Financiare</span></td>
+                    <td>Prizren</td>
+                    <td>
+                      <div class="abar"><span>6</span>
+                        <div class="ab">
+                          <div class="af" style="width:60%"></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="sb sa">Aktive</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="jt">Asistent Administrativ</span></td>
+                    <td>Gjilan</td>
+                    <td>
+                      <div class="abar"><span>0</span>
+                        <div class="ab">
+                          <div class="af" style="width:0%"></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="sb sc2">Skaduar</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div class="panel">
+                <div class="ph"><span class="ph-t">Profili</span>
+                  <button class="ph-c"
+                  
+                   onclick="nav('shto',document.querySelector('[onclick*=shto]'))">Edito</button></div>
+                <div style="padding:14px 15px;">
+                  <div
+                    style="display:flex;align-items:center;gap:11px;margin-bottom:13px;padding-bottom:13px;border-bottom:0.5px solid #151f2e;">
+                    <div class="pav">TK</div>
+                    <div>
+                      <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ccdce8;">TechKos
+                        SH.P.K</div>
+                      <div style="font-size:10.5px;color:#3d5166;">Teknologji · Prishtinë</div>
+                      <div class="ver"><svg width="7" height="7" viewBox="0 0 7 7" fill="none">
+                          <path d="M1 3.5l2 2 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        </svg>I Verifikuar</div>
+                    </div>
+                  </div>
+                  <div style="margin-bottom:7px;">
+                    <div class="flabel">Email</div>
+                    <div class="fval">info@techkos.com</div>
+                  </div>
+                  <div style="margin-bottom:7px;">
+                    <div class="flabel">Punëtorë</div>
+                    <div class="fval">11 – 55</div>
+                  </div>
+                  <div>
+                    <div class="flabel">Fusha</div><span class="ftag">Teknologji</span>
+                  </div>
+                  <div class="pbar-w" style="margin-top:11px;">
+                    <div class="pbar-f" style="width:60%"></div>
+                  </div>
+                  <div class="ptxt"><span>3 / 5 shpallje aktive</span><span>Biznes Standard</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="ph"><span class="ph-t">Aktiviteti i Fundit</span></div>
+            <div class="aitem">
+              <div class="adot" style="background:#639922"></div>
+              <div class="atxt"><strong>Arjeta M.</strong> aplikoi për pozitën Zhvillues Software</div><span
+                class="atime">2 orë</span>
+            </div>
+            <div class="aitem">
+              <div class="adot" style="background:#378add"></div>
+              <div class="atxt"><strong>JobAdvisor</strong> verifikoi profilin tuaj të kompanisë me sukses</div><span
+                class="atime">1 ditë</span>
+            </div>
+            <div class="aitem">
+              <div class="adot" style="background:#c9a84c"></div>
+              <div class="atxt"><strong>Blerim K.</strong> u punësua si Specialist IT — Felicitacione!</div><span
+                class="atime">3 ditë</span>
+            </div>
+            <div class="aitem">
+              <div class="adot" style="background:#e24b4a"></div>
+              <div class="atxt">Shpallja <strong>Asistent Administrativ</strong> ka skaduar — rinovojeni tani</div><span
+                class="atime">5 ditë</span>
+            </div>
+            <div class="aitem">
+              <div class="adot" style="background:#639922"></div>
+              <div class="atxt"><strong>Florie B.</strong> dhe <strong>Gent H.</strong> aplikuan për Analiste Financiare
+              </div><span class="atime">6 ditë</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: SHPALLJET E PUNES -->
+        <div class="page" id="page-puna">
+          <div class="sgrid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+            <div class="scard sc-gold">
+              <div class="sc-lbl">Aktive</div>
+              <div class="sc-val">3</div>
+            </div>
+            <div class="scard sc-blue">
+              <div class="sc-lbl">Në Shqyrtim</div>
+              <div class="sc-val">2</div>
+            </div>
+            <div class="scard sc-red">
+              <div class="sc-lbl">Skaduar</div>
+              <div class="sc-val">2</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="ph"><span class="ph-t">Të gjitha Shpalljet</span><button class="ph-b"
+                onclick="nav('shto',document.querySelectorAll('.nitem')[4])">+ Shto të Re</button></div>
+            <table class="jtable">
+              <thead>
+                <tr>
+                  <th>Pozita</th>
+                  <th>Fusha</th>
+                  <th>Regjioni</th>
+                  <th>Aplikantë</th>
+                  <th>Statusi</th>
+                  <th>Data</th>
+                  <th>Veprime</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="jt">Zhvillues Software</span></td>
+                  <td>Teknologji</td>
+                  <td>Prishtinë</td>
+                  <td>
+                    <div class="abar"><span>7</span>
+                      <div class="ab">
+                        <div class="af" style="width:70%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sa">Aktive</span></td>
+                  <td>22 Prill</td>
+                  <td><button class="tact-btn" onclick="nav('shto',document.querySelector('[onclick*=shto]'))">Edito</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Menaxher Marketingu</span></td>
+                  <td>Marketing</td>
+                  <td>Pejë</td>
+                  <td>
+                    <div class="abar"><span>5</span>
+                      <div class="ab">
+                        <div class="af" style="width:50%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sr">Shqyrtim</span></td>
+                  <td>20 Prill</td>
+                  <td><button class="tact-btn">Edito</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Analiste Financiare</span></td>
+                  <td>Financë</td>
+                  <td>Prizren</td>
+                  <td>
+                    <div class="abar"><span>6</span>
+                      <div class="ab">
+                        <div class="af" style="width:60%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sa">Aktive</span></td>
+                  <td>18 Prill</td>
+                  <td><button class="tact-btn">Edito</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Asistent Administrativ</span></td>
+                  <td>Tregti</td>
+                  <td>Gjilan</td>
+                  <td>
+                    <div class="abar"><span>0</span>
+                      <div class="ab">
+                        <div class="af" style="width:0%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sc2">Skaduar</span></td>
+                  <td>10 Prill</td>
+                  <td><button class="tact-btn">Rinovo</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Specialist IT</span></td>
+                  <td>Teknologji</td>
+                  <td>Mitrovicë</td>
+                  <td>
+                    <div class="abar"><span>3</span>
+                      <div class="ab">
+                        <div class="af" style="width:30%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sr">Shqyrtim</span></td>
+                  <td>15 Prill</td>
+                  <td><button class="tact-btn">Edito</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Designer Grafik</span></td>
+                  <td>Marketing</td>
+                  <td>Prishtinë</td>
+                  <td>
+                    <div class="abar"><span>4</span>
+                      <div class="ab">
+                        <div class="af" style="width:40%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sa">Aktive</span></td>
+                  <td>25 Prill</td>
+                  <td><button class="tact-btn">Edito</button></td>
+                </tr>
+                <tr>
+                  <td><span class="jt">Kontabilist</span></td>
+                  <td>Financë</td>
+                  <td>Pejë</td>
+                  <td>
+                    <div class="abar"><span>0</span>
+                      <div class="ab">
+                        <div class="af" style="width:0%"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="sb sc2">Skaduar</span></td>
+                  <td>5 Prill</td>
+                  <td><button class="tact-btn">Rinovo</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PAGE: APLIKANTET -->
+        <div class="page" id="page-aplikantet">
+          <div class="filter-row">
+            <span style="font-size:11.5px;color:#3d5166;margin-right:4px;">Filtro:</span>
+            <button class="filter-btn on" onclick="filterAppl(this,'all')">Të gjithë (18)</button>
+            <button class="filter-btn" onclick="filterAppl(this,'ri')">Të rinj (5)</button>
+            <button class="filter-btn" onclick="filterAppl(this,'shqyrtim')">Në shqyrtim (8)</button>
+            <button class="filter-btn" onclick="filterAppl(this,'pranuar')">Pranuar (4)</button>
+            <button class="filter-btn" onclick="filterAppl(this,'refuzuar')">Refuzuar (1)</button>
+          </div>
+          <div id="appl-list">
+            <div class="appl-card">
+              <div class="appl-av" style="background:#63992218;color:#97c459;">AM</div>
+              <div>
+                <div class="appl-name">Arjeta Morina</div>
+                <div class="appl-pos">Aplikoi për: Zhvillues Software</div>
+                <div class="appl-meta"><span class="appl-tag">Prishtinë</span><span class="appl-tag">3 vjet
+                    përvojë</span><span class="appl-tag">2 orë më parë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button
+                  class="btn-acc">Prano</button><button class="btn-rej">Refuzo</button></div>
+            </div>
+            <div class="appl-card">
+              <div class="appl-av" style="background:#378add20;color:#85b7eb;">BK</div>
+              <div>
+                <div class="appl-name">Blerim Krasniqi</div>
+                <div class="appl-pos">Aplikoi për: Specialist IT</div>
+                <div class="appl-meta"><span class="appl-tag">Mitrovicë</span><span class="appl-tag">5 vjet
+                    përvojë</span><span class="appl-tag">1 ditë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button class="btn-acc"
+                  style="background:#c9a84c20;color:#c9a84c;border-color:#c9a84c44">Punësuar ✓</button></div>
+            </div>
+            <div class="appl-card">
+              <div class="appl-av" style="background:#c9a84c18;color:#c9a84c;">FB</div>
+              <div>
+                <div class="appl-name">Florie Berisha</div>
+                <div class="appl-pos">Aplikoi për: Analiste Financiare</div>
+                <div class="appl-meta"><span class="appl-tag">Prizren</span><span class="appl-tag">4 vjet
+                    përvojë</span><span class="appl-tag">2 ditë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button
+                  class="btn-acc">Prano</button><button class="btn-rej">Refuzo</button></div>
+            </div>
+            <div class="appl-card">
+              <div class="appl-av" style="background:#e24b4a18;color:#f09595;">GH</div>
+              <div>
+                <div class="appl-name">Gent Hoxha</div>
+                <div class="appl-pos">Aplikoi për: Analiste Financiare</div>
+                <div class="appl-meta"><span class="appl-tag">Gjilan</span><span class="appl-tag">2 vjet
+                    përvojë</span><span class="appl-tag">2 ditë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button
+                  class="btn-acc">Prano</button><button class="btn-rej">Refuzo</button></div>
+            </div>
+            <div class="appl-card">
+              <div class="appl-av" style="background:#53b7dd20;color:#85cceb;">LN</div>
+              <div>
+                <div class="appl-name">Liridon Nimani</div>
+                <div class="appl-pos">Aplikoi për: Menaxher Marketingu</div>
+                <div class="appl-meta"><span class="appl-tag">Pejë</span><span class="appl-tag">6 vjet
+                    përvojë</span><span class="appl-tag">3 ditë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button
+                  class="btn-acc">Prano</button><button class="btn-rej">Refuzo</button></div>
+            </div>
+            <div class="appl-card">
+              <div class="appl-av" style="background:#9e6b9922;color:#d4a8d4;">VI</div>
+              <div>
+                <div class="appl-name">Vjosa Idrizi</div>
+                <div class="appl-pos">Aplikoi për: Designer Grafik</div>
+                <div class="appl-meta"><span class="appl-tag">Prishtinë</span><span class="appl-tag">4 vjet
+                    përvojë</span><span class="appl-tag">1 ditë</span></div>
+              </div>
+              <div class="appl-actions"><button class="btn-view">Shiko CV</button><button
+                  class="btn-acc">Prano</button><button class="btn-rej">Refuzo</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: PLANI -->
+        <div class="page" id="page-plan">
+          <div style="margin-bottom:14px;">
+            <div class="section-h">Plani Aktual</div>
+            <div class="panel" style="padding:16px 18px;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;">
+                <div>
+                  <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#ccdce8;">Biznes
+                    Standard</div>
+                  <div class="plan-badge">Aktiv deri: 30 Maj 2026</div>
+                </div>
+                <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:700;color:#c9a84c;">€49<span
+                    style="font-size:12px;color:#3d5166;font-family:'DM Sans';">/muaj</span></div>
+              </div>
+              <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <div style="background:#0f1620;border-radius:7px;padding:10px 12px;">
+                  <div
+                    style="font-size:9.5px;color:#202e3d;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;">
+                    Shpallje të Përdorura</div>
+                  <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#ccdce8;">3 <span
+                      style="font-size:12px;color:#3d5166;font-weight:400;">/ 5</span></div>
+                  <div class="pbar-w" style="margin-top:6px;">
+                    <div class="pbar-f" style="width:60%"></div>
+                  </div>
+                </div>
+                <div style="background:#0f1620;border-radius:7px;padding:10px 12px;">
+                  <div
+                    style="font-size:9.5px;color:#202e3d;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;">
+                    Aplikantë të Parë</div>
+                  <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#ccdce8;">18 <span
+                      style="font-size:12px;color:#3d5166;font-weight:400;">/ 50</span></div>
+                  <div class="pbar-w" style="margin-top:6px;">
+                    <div class="pbar-f" style="width:36%;background:#378add;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-h">Krahaso Planet</div>
+          <div class="plan-grid">
+            <div class="plan-card">
+              <div class="plan-name">Bazik</div>
+              <div class="plan-price">€19<span>/muaj</span></div>
+              <div style="margin:12px 0;border-top:0.5px solid #1a2230;padding-top:10px;">
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>1 shpallje aktive</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>10 aplikantë/muaj</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 9l6-6M9 9L3 3" stroke="#e24b4a" stroke-width="1.3" stroke-linecap="round"></path>
+                  </svg><span style="color:#2e3a4a;">Profil i shënuar</span></div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 9l6-6M9 9L3 3" stroke="#e24b4a" stroke-width="1.3" stroke-linecap="round"></path>
+                  </svg><span style="color:#2e3a4a;">Statistika</span></div>
+              </div>
+              <button class="plan-cta" style="background:#111a26;color:#3d5166;border:0.5px solid #1a2230;">Zgjedh
+                Bazik</button>
+            </div>
+            <div class="plan-card plan-current">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <div class="plan-name">Standard</div><span class="plan-badge">Aktual</span>
+              </div>
+              <div class="plan-price">€49<span>/muaj</span></div>
+              <div style="margin:12px 0;border-top:0.5px solid #1a2230;padding-top:10px;">
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>5 shpallje aktive</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>50 aplikantë/muaj</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>Profil i shënuar</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 9l6-6M9 9L3 3" stroke="#e24b4a" stroke-width="1.3" stroke-linecap="round"></path>
+                  </svg><span style="color:#2e3a4a;">Statistika të avancuara</span></div>
+              </div>
+              <button class="plan-cta" style="opacity:.5;cursor:default;">Plani Aktual</button>
+            </div>
+            <div class="plan-card">
+              <div class="plan-name">Premium</div>
+              <div class="plan-price">€99<span>/muaj</span></div>
+              <div style="margin:12px 0;border-top:0.5px solid #1a2230;padding-top:10px;">
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>Shpallje të pakufizuara</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>Aplikantë të pakufizuar</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>Profil i shënuar</div>
+                <div class="plan-feature"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l3 3 5-5" stroke="#639922" stroke-width="1.3" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>Statistika të avancuara</div>
+              </div>
+              <button class="plan-cta">Upgrade →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: SHTO POZITE -->
+        <div class="page" id="page-shto">
+          <div class="panel" style="padding:20px 22px;">
+            <div class="form-section">Informacione për Pozitën</div>
+            <div class="form-grid">
+              <div class="fg1"><label class="flg">Titulli i Pozitës *</label><input class="finp" type="text"
+                  placeholder="p.sh. Zhvillues Software i Lartë"></div>
+              <div><label class="flg">Fusha / Industria *</label>
+                <select class="finp">
+                  <option value="">— Zgjedh —</option>
+                  <option>Teknologji</option>
+                  <option>Marketing</option>
+                  <option>Financë</option>
+                  <option>Tregti</option>
+                  <option>Tjetër</option>
+                </select>
+              </div>
+              <div><label class="flg">Regjioni *</label>
+                <select class="finp">
+                  <option value="">— Zgjedh —</option>
+                  <option>Prishtinë</option>
+                  <option>Pejë</option>
+                  <option>Prizren</option>
+                  <option>Gjilan</option>
+                  <option>Mitrovicë</option>
+                  <option>Tjetër</option>
+                </select>
+              </div>
+              <div><label class="flg">Lloji i Punës</label>
+                <select class="finp">
+                  <option>Kohë e plotë</option>
+                  <option>Kohë e pjesshme</option>
+                  <option>Remote</option>
+                  <option>Praktikë</option>
+                </select>
+              </div>
+              <div><label class="flg">Paga (€/muaj)</label><input class="finp" type="text"
+                  placeholder="p.sh. 800 – 1200"></div>
+              <div class="fg1"><label class="flg">Përshkrimi i Pozitës *</label><textarea class="finp"
+                  placeholder="Përshkruani detyrat, kualifikimet dhe aftësitë e kërkuara..."></textarea></div>
+              <div class="fg1"><label class="flg">Kualifikimet e Kërkuara</label><textarea class="finp"
+                  style="min-height:70px;"
+                  placeholder="p.sh. Bachelor në Informatikë, 2+ vjet përvojë me React..."></textarea></div>
+            </div>
+            <div class="form-section" style="margin-top:18px;">Afati dhe Kontakti</div>
+            <div class="form-grid">
+              <div><label class="flg">Afati i Aplikimit</label><input class="finp" type="date"></div>
+              <div><label class="flg">Email Kontakti</label><input class="finp" type="email"
+                  placeholder="rekrutim@kompania.com"></div>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:8px;">
+              <button class="form-submit">Publiko Shpalljen →</button>
+              <button class="btn-g" style="margin-top:8px;">Ruaj si Draft</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: HISTORIA -->
+        <div class="page" id="page-historia">
+          <div class="sgrid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+            <div class="scard sc-gold">
+              <div class="sc-lbl">Shpallje Totale</div>
+              <div class="sc-val">12</div>
+              <div class="sc-ch">që nga fillimi</div>
+            </div>
+            <div class="scard sc-green">
+              <div class="sc-lbl">Kandidatë Punësuar</div>
+              <div class="sc-val">9</div>
+              <div class="sc-ch up">sukses i lartë</div>
+            </div>
+            <div class="scard sc-blue">
+              <div class="sc-lbl">Aplikantë Total</div>
+              <div class="sc-val">74</div>
+              <div class="sc-ch">gjithsej</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="ph"><span class="ph-t">Regjistri i Aktivitetit</span></div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#63992218;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <circle cx="7" cy="5" r="2.5" stroke="#97c459" stroke-width="1.1"></circle>
+                  <path d="M2 12.5c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5" stroke="#97c459" stroke-width="1.1"
+                    stroke-linecap="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Blerim Krasniqi u Punësua</div>
+                <div class="hist-sub">Pozita: Specialist IT · Mitrovicë</div>
+              </div>
+              <span class="hist-date">25 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#c9a84c18;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <rect x="1" y="2" width="12" height="10" rx="1.5" stroke="#c9a84c" stroke-width="1.1"></rect>
+                  <path d="M4 5.5h6M4 8h4" stroke="#c9a84c" stroke-width="1.1" stroke-linecap="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Shpallje e Re Publikuar</div>
+                <div class="hist-sub">Designer Grafik · Prishtinë</div>
+              </div>
+              <span class="hist-date">25 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#378add18;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <path d="M2 3l5 4 5-4" stroke="#85b7eb" stroke-width="1.1" stroke-linecap="round"></path>
+                  <rect x="1" y="2.5" width="12" height="9" rx="1.5" stroke="#85b7eb" stroke-width="1.1"></rect>
+                </svg></div>
+              <div>
+                <div class="hist-title">Profili i Kompanisë u Verifikua</div>
+                <div class="hist-sub">Verifikim nga ekipi i JobAdvisor</div>
+              </div>
+              <span class="hist-date">24 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#63992218;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <circle cx="7" cy="5" r="2.5" stroke="#97c459" stroke-width="1.1"></circle>
+                  <path d="M2 12.5c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5" stroke="#97c459" stroke-width="1.1"
+                    stroke-linecap="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Dona Gashi u Punësua</div>
+                <div class="hist-sub">Pozita: Menaxhere HR · Prishtinë</div>
+              </div>
+              <span class="hist-date">18 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#e24b4a18;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <circle cx="7" cy="7" r="5.5" stroke="#f09595" stroke-width="1.1"></circle>
+                  <path d="M7 4v3" stroke="#f09595" stroke-width="1.3" stroke-linecap="round"></path>
+                  <circle cx="7" cy="10" r=".6" fill="#f09595"></circle>
+                </svg></div>
+              <div>
+                <div class="hist-title">Shpallja Skadoi</div>
+                <div class="hist-sub">Asistent Administrativ · Gjilan</div>
+              </div>
+              <span class="hist-date">10 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#c9a84c18;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <path d="M7 1l1.5 4H13l-3.5 2.5L10.8 12 7 9.5 3.2 12l1.3-4.5L1 5h4.5L7 1z" stroke="#c9a84c"
+                    stroke-width="1.1" stroke-linejoin="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Upgrade i Planit</div>
+                <div class="hist-sub">Nga Bazik → Biznes Standard</div>
+              </div>
+              <span class="hist-date">1 Prill 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#63992218;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <circle cx="7" cy="5" r="2.5" stroke="#97c459" stroke-width="1.1"></circle>
+                  <path d="M2 12.5c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5" stroke="#97c459" stroke-width="1.1"
+                    stroke-linecap="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Mentor Leka u Punësua</div>
+                <div class="hist-sub">Pozita: Analiste Financiare · Prizren</div>
+              </div>
+              <span class="hist-date">28 Mars 2026</span>
+            </div>
+            <div class="hist-item">
+              <div class="hist-ic" style="background:#378add18;"><svg width="14" height="14" viewBox="0 0 14 14"
+                  fill="none">
+                  <rect x="1" y="2.5" width="12" height="9" rx="1.5" stroke="#85b7eb" stroke-width="1.1"></rect>
+                  <path d="M4 5.5h6M4 8h4" stroke="#85b7eb" stroke-width="1.1" stroke-linecap="round"></path>
+                </svg></div>
+              <div>
+                <div class="hist-title">Llogaria u Krijua</div>
+                <div class="hist-sub">TechKos SH.P.K u regjistrua në JobAdvisor</div>
+              </div>
+              <span class="hist-date">15 Shkurt 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: PROFILI -->
+        <div class="page" id="page-profili">
+          <div class="row2">
+            <div class="panel" style="padding:18px 20px;">
+              <div class="form-section">Të dhënat e Kompanisë</div>
+              <div class="form-grid">
+                <div class="fg1"><label class="flg">Emri i Biznesit *</label><input class="finp" type="text"
+                    value="TechKos SH.P.K"></div>
+                <div class="fg1"><label class="flg">Email i Kompanisë *</label><input class="finp" type="email"
+                    value="info@techkos.com"></div>
+                <div><label class="flg">Numri i Punëtorëve *</label>
+                  <select class="finp">
+                    <option>1 – 10</option>
+                    <option selected="">11 – 55</option>
+                    <option>55+</option>
+                  </select>
+                </div>
+                <div><label class="flg">Regjioni *</label>
+                  <select class="finp">
+                    <option selected="">Prishtinë</option>
+                    <option>Pejë</option>
+                    <option>Prizren</option>
+                    <option>Gjilan</option>
+                    <option>Mitrovicë</option>
+                    <option>Tjetër</option>
+                  </select>
+                </div>
+                <div class="fg1"><label class="flg">Fusha e Kompanisë *</label>
+                  <select class="finp">
+                    <option selected="">Teknologji</option>
+                    <option>Marketing</option>
+                    <option>Financë</option>
+                    <option>Tregti</option>
+                    <option>Tjetër</option>
+                  </select>
+                </div>
+                <div class="fg1"><label class="flg">Përshkrimi i Kompanisë</label><textarea class="finp"
+                    style="min-height:80px;">TechKos SH.P.K është kompani udhëheqëse në fushën e teknologjisë informative në Kosovë, duke ofruar zgjidhje softuerike dhe shërbime IT për klientë vendorë dhe ndërkombëtarë.</textarea>
+                </div>
+                <div><label class="flg">Faqja Web</label><input class="finp" type="text" value="www.techkos.com"></div>
+                <div><label class="flg">Numri i Telefonit</label><input class="finp" type="text"
+                    value="+383 44 123 456"></div>
+              </div>
+              <button class="form-submit" style="margin-top:12px;">Ruaj Ndryshimet</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div class="panel" style="padding:16px;">
+                <div
+                  style="display:flex;align-items:center;gap:13px;margin-bottom:14px;padding-bottom:13px;border-bottom:0.5px solid #151f2e;">
+                  <div class="pav">TK</div>
+                  <div>
+                    <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#ccdce8;">TechKos
+                      SH.P.K</div>
+                    <div style="font-size:10.5px;color:#3d5166;margin-top:2px;">Teknologji · Prishtinë · 11–55 punëtorë
+                    </div>
+                    <div class="ver"><svg width="7" height="7" viewBox="0 0 7 7" fill="none">
+                        <path d="M1 3.5l2 2 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>Profil i Verifikuar</div>
+                  </div>
+                </div>
+                <div style="margin-bottom:9px;">
+                  <div class="flabel">Email</div>
+                  <div class="fval">info@techkos.com</div>
+                </div>
+                <div style="margin-bottom:9px;">
+                  <div class="flabel">Faqja Web</div>
+                  <div class="fval" style="color:#c9a84c;">www.techkos.com</div>
+                </div>
+                <div style="margin-bottom:9px;">
+                  <div class="flabel">Telefon</div>
+                  <div class="fval">+383 44 123 456</div>
+                </div>
+                <div>
+                  <div class="flabel">Anëtar që nga</div>
+                  <div class="fval">Shkurt 2026</div>
+                </div>
+              </div>
+              <div class="panel" style="padding:14px 15px;">
+                <div class="ph-t" style="display:block;margin-bottom:10px;">Statistikat e Profilit</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                  <div style="background:#0f1620;border-radius:7px;padding:8px 10px;">
+                    <div style="font-size:9.5px;color:#202e3d;margin-bottom:3px;">Shpallje</div>
+                    <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#c9a84c;">12</div>
+                  </div>
+                  <div style="background:#0f1620;border-radius:7px;padding:8px 10px;">
+                    <div style="font-size:9.5px;color:#202e3d;margin-bottom:3px;">Punësuar</div>
+                    <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#97c459;">9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE: SETTINGS -->
+        <div class="page" id="page-settings">
+          <div class="panel" style="padding:16px 20px;margin-bottom:14px;">
+            <div class="section-h">Njoftimet</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Aplikantë të Rinj</div>
+                <div class="settings-sub">Merr email kur dikush aplikon</div>
+              </div>
+              <div class="settings-right">
+                <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Shpallje Skaduese</div>
+                <div class="settings-sub">Kujtesë 3 ditë para skadimit</div>
+              </div>
+              <div class="settings-right">
+                <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Njoftime Email Javore</div>
+                <div class="settings-sub">Raport i plotë çdo të hënë</div>
+              </div>
+              <div class="settings-right">
+                <div class="toggle" onclick="this.classList.toggle('on')"></div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Njoftime SMS</div>
+                <div class="settings-sub">Mesazhe direkte në telefon</div>
+              </div>
+              <div class="settings-right">
+                <div class="toggle" onclick="this.classList.toggle('on')"></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel" style="padding:16px 20px;margin-bottom:14px;">
+            <div class="section-h">Siguria e Llogarisë</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Ndysho Fjalëkalimin</div>
+                <div class="settings-sub">Rekomandohet çdo 3 muaj</div>
+              </div>
+              <div class="settings-right"><button class="btn-g">Ndysho</button></div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Vërtetim Dy-Faktor (2FA)</div>
+                <div class="settings-sub">Shtresa shtesë e sigurisë</div>
+              </div>
+              <div class="settings-right">
+                <div class="toggle" onclick="this.classList.toggle('on')"></div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Seancat Aktive</div>
+                <div class="settings-sub">2 pajisje të kyçura aktualisht</div>
+              </div>
+              <div class="settings-right"><button class="btn-g">Shiko</button></div>
+            </div>
+          </div>
+          <div class="panel" style="padding:16px 20px;">
+            <div class="section-h" style="color:#e24b4a;border-color:#e24b4a30;">Zona e Rrezikshme</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Çaktivizo Llogarinë</div>
+                <div class="settings-sub">Profili nuk do të jetë i dukshëm</div>
+              </div>
+              <div class="settings-right"><button class="danger-btn">Çaktivizo</button></div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Fshi Llogarinë Përgjithmonë</div>
+                <div class="settings-sub">Ky veprim nuk mund të kthehet</div>
+              </div>
+              <div class="settings-right"><button class="danger-btn">Fshi</button></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
